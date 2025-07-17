@@ -1,11 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Mi prueba </title>
-</head>
-<body>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+    .titulo-navbar {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .ecommerce-titulo {
+        justify-content: center;
+      font-size: 16px;
+      margin: 0;
     
+    }
+
+    .page {
+      display: grid;
+      grid-template-areas:
+        "head head"
+        "nav main"
+        "foot foot";
+      grid-template-rows: 60px 1fr auto;
+      grid-template-columns: 200px 1fr;
+      gap: 10px;
+      min-height: 100vh;
+    }
+
+    .page > header {
+      grid-area: head;
+      background-color: #003399;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+    }
+
+    .page > nav {
+      grid-area: nav;
+      background-color: #ee5494;
+      padding: 20px;
+    }
+
+    .page > main {
+      grid-area: main;
+      background-color: #c2c2c1;
+      padding: 20px;
+    }
+
+    .page > footer {
+      grid-area: foot;
+      background-color: #b2b6b3;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 250px;
+      height: 380px;
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .logo-black-footer {
+      margin-top: 20px;
+    }
+
+    .logo-black {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .texto-footer {
+      font-size: 14px;
+      color: #707070;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+    <header>
+    
+  </header>
+    <header class="navbar">
+    <h1 class="titulo-navbar">Navbar</h1>
+    <span class="ecommerce-titulo">Mi Ecommerce</span>
+  </header>
+    </header>
+    <nav>
+      <p> Categorias</p>
+      <ul>
+        <li>Perfumes</li>
+        <li>Ropa</li>
+        <li>Accesorios</li>
+      </ul>
+    </nav>
+
+    <main>
+     <div class="container mt-4">
+  <!-- Fila con 3 tarjetas -->
+  <div class="row mb-4">
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card">
+        <img src="/examen/assets/img/perfumep - copia.webp" class="card-img-top" alt="Cupon 1">
+        <div class="card-body">
+          <h5 class="card-title">Perfume MyKingdog</h5>
+          <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i>37.400</p>
+          <button class="btn btn-primary btn-block">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card">
+        <img src="/examen/assets/img/perfume - copia.webp" class="card-img-top" alt="Cupon 2">
+        <div class="card-body">
+          <h5 class="card-title">Perfume Phantom</h5>
+          <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> 63990</p>
+          <button class="btn btn-primary btn-block">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card">
+        <img src="/examen/assets/img/zapato - copia.jpeg" class="card-img-top" alt="Cupon 3">
+        <div class="card-body">
+          <h5 class="card-title">Zapatos Docker</h5>
+          <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> 29.990</p>
+          <button class="btn btn-primary btn-block">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fila con 1 tarjeta alineada a la izquierda -->
+  <div class="row justify-content-start">
+  <div class="col-md-4 d-flex justify-content-start">
+    <div class="card">
+      <img src="/examen/assets/img/poleron.webp" class="card-img-top" alt="Cupon 4">
+      <div class="card-body">
+        <h5 class="card-title">Poleron Puma</h5>
+        <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> 44.700</p>
+        <button class="btn btn-primary btn-block">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 d-flex justify-content-start">
+    <div class="card">
+      <img src="/examen/assets/img/celular - copia.webp" class="card-img-top" alt="Cupon 5">
+      <div class="card-body">
+        <h5 class="card-title">Celular 2.0</h5>
+        <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> 55.000</p>
+        <button class="btn btn-primary btn-block">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nueva tarjeta agregada al lado -->
+  <div class="col-md-4 d-flex justify-content-start">
+    <div class="card">
+      <img src="/examen/assets/img/table - copia.jpg" class="card-img-top" alt="Cupon 6">
+      <div class="card-body">
+        <h5 class="card-title">Tecnlogia Apple</h5>
+        <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> 60.000</p>
+        <button class="btn btn-primary btn-block">Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+    </main>
+
+ <footer class="logo-black-footer pb-4 text-center">
+  <img class="logo-black mx-auto d-block" src="img/WWE_Network_logo.svg" alt="MiEccomerce">
+  <p class="texto-footer">©Mi Ecommerce .</p>
+</footer>
+
+  </div>
 </body>
 </html>
